@@ -1,8 +1,6 @@
-import { Console } from "console"
 import fs from "fs"
-import path from "path"
 
-const data = fs.readFileSync(path.resolve("day4/day4.txt"), "utf8")
+const data = fs.readFileSync("day4/day4.txt", "utf8")
 
 // PUZZLE 1 https://adventofcode.com/2023/day/4#part1
 /* const cards = data.split("\n")
