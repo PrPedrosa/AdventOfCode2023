@@ -116,4 +116,14 @@ const run = async (jobs, concurrentWorkers) => {
 //RUN with 5 only (machine needs to have 5 cpus)
 log("number of cores here", os.cpus().length)
 await run(findLocationJobs, 5)
+
+// trying dynamic logging
+let plsWait = "brute forcing it, plsWait"
+let dots = ["", ".", "..", "..."]
+let i = 0
+setInterval(() => {
+	process.stdout.write(`\r${plsWait}${dots[i]}`)
+	process.stdout.clearLine(1) // because this is from current cursor position going to the right
+	i = i === 3 ? 0 : i + 1
+}, 700)
 //################## END OF Workers experiment ########################
